@@ -19,10 +19,10 @@
     }
   }
 
-  //   document.querySelector("#inp").addEventListener("change", readFile);
-  var holder = document.getElementById("holder");
+// document.querySelector("#inp").addEventListener("change", readFile);
+  var holder = document.getElementById("inp");
   holder.ondragover = function () {
-    this.className = "hover";
+    document.getElementById("holder").className = "hover";
     return false;
   };
   holder.ondragend = function () {
@@ -40,7 +40,7 @@
 <p id="fileDragType"></p>
 <!-- <input id="inp" style="color: #fff;" type="file" /> -->
 <form id="holder" method="post" action="">
-  <input style="color: #fff" type="file" />
+  <input id="inp" style="color: #fff" type="file" />
   <p class="h3">OR</p>
   <p class="h1">Drop File Here</p>
   <!-- <div></div> -->
@@ -50,6 +50,7 @@
 <img id="img" height="150" />
 <style>
   #holder {
+    overflow: hidden;
     width: 500px;
     height: 200px;
     border: 10px dashed #fff;
