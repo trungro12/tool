@@ -1,23 +1,59 @@
 <script>
+    document.getElementById("fileDragName").innerHTML = "null";
+    document.getElementById("fileDragSize").innerHTML = "null";
+    document.getElementById("fileDragType").innerHTML = "null";
   function readFile() {
     if (!this.files || !this.files[0]) return;
+    for (var i = 0; i < files.length; i++) {
+      document.getElementById("fileDragName").innerHTML = files[i].name;
+      document.getElementById("fileDragSize").innerHTML = files[i].size;
+      document.getElementById("fileDragType").innerHTML = files[i].type;
+      const FR = new FileReader();
 
-    const FR = new FileReader();
+      FR.addEventListener("load", function (evt) {
+        document.querySelector("#img").src = evt.target.result;
+        document.querySelector("#b64").textContent = evt.target.result;
+      });
 
-    FR.addEventListener("load", function (evt) {
-      document.querySelector("#img").src = evt.target.result;
-      document.querySelector("#b64").textContent = evt.target.result;
-    });
-
-    FR.readAsDataURL(this.files[0]);
+      FR.readAsDataURL(this.files[0]);
+    }
   }
 
-  document.querySelector("#inp").addEventListener("change", readFile);
+  //   document.querySelector("#inp").addEventListener("change", readFile);
+  var holder = document.getElementById("holder");
+  holder.ondragover = function () {
+    this.className = "hover";
+    return false;
+  };
+  holder.ondragend = function () {
+    this.className = "";
+    return false;
+  };
+  holder.ondrop = function (e) {
+    this.className = "";
+    e.preventDefault();
+    readfiles(e.dataTransfer.files);
+  };
 </script>
-<input id="inp" style="color: #fff;" type="file" />
+<!-- <input id="inp" style="color: #fff;" type="file" /> -->
+<form method="post" action="">
+  <input style="color: #fff" type="file" />
+  <p>Name : <span id="fileDragName"></span></p>
+  <p>Size : <span id="fileDragSize"></span></p>
+  <p>Type : <span id="fileDragType"></span></p>
+  <div
+    id="holder"
+    style="width: 200px; height: 200px; border: 10px dashed #ccc"
+  ></div>
+</form>
+
 <p id="b64"></p>
 <img id="img" height="150" />
 <style>
+  #holder.hover {
+    border: 10px dashed #0c0 !important;
+  }
+
   #b64 {
     max-width: 500px;
     height: 100px;
