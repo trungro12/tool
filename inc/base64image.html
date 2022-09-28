@@ -12,6 +12,7 @@
 
       FR.addEventListener("load", function (evt) {
         document.querySelector("#img").src = evt.target.result;
+        document.querySelector("#b64").style.display = "block";
         document.querySelector("#b64").textContent = evt.target.result;
       });
 
@@ -68,7 +69,7 @@
     max-width: 500px;
     height: 100px;
     background: #fff;
-    display: block;
+    display: none;
     overflow: auto;
     word-wrap: break-word;
     margin: 15px auto;
