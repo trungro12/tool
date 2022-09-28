@@ -14,6 +14,19 @@
 
   document.querySelector("#inp").addEventListener("change", readFile);
 </script>
-<input id="inp" type="file" />
-<p id="b64" style="max-width: 200px"></p>
+<input id="inp" style="color: #fff;" type="file" />
+<p id="b64"></p>
 <img id="img" height="150" />
+<style>
+  #b64 {
+    max-width: 500px;
+    height: 100px;
+    background: #fff;
+    display: block;
+    overflow: auto;
+    word-wrap: break-word;
+    margin: 15px auto;
+    -webkit-user-select: all;
+    user-select: all;
+  }
+</style>
