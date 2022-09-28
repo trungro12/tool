@@ -2,9 +2,12 @@
   function readFile() {
     if (!this.files || !this.files[0]) return;
     for (var i = 0; i < files.length; i++) {
-      document.getElementById("fileDragName").innerHTML = "Name : " + files[i].name;
-      document.getElementById("fileDragSize").innerHTML = "Size : " + files[i].size;
-      document.getElementById("fileDragType").innerHTML = "Type : " + files[i].type;
+      document.getElementById("fileDragName").innerHTML =
+        "Name : " + files[i].name;
+      document.getElementById("fileDragSize").innerHTML =
+        "Size : " + files[i].size;
+      document.getElementById("fileDragType").innerHTML =
+        "Type : " + files[i].type;
       const FR = new FileReader();
 
       FR.addEventListener("load", function (evt) {
@@ -32,25 +35,26 @@
     readFile(e.dataTransfer.files);
   };
 </script>
+<p id="fileDragName"></p>
+<p id="fileDragSize"></p>
+<p id="fileDragType"></p>
 <!-- <input id="inp" style="color: #fff;" type="file" /> -->
-<form method="post" action="">
+<form id="holder" method="post" action="">
   <input style="color: #fff" type="file" />
-  <p id="fileDragName"></p>
-  <p id="fileDragSize"></p>
-  <p id="fileDragType"></p>
-  <div
-    id="holder"
-    style="width: 200px; height: 200px; border: 10px dashed #ccc"
-  ></div>
+  <!-- <div></div> -->
 </form>
 
 <p id="b64"></p>
 <img id="img" height="150" />
 <style>
+  #holder {
+    width: 200px;
+    height: 200px;
+    border: 10px dashed #ccc;
+  }
   #holder.hover {
     border: 10px dashed #0c0 !important;
   }
-
   #b64 {
     max-width: 500px;
     height: 100px;
