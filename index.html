@@ -23,28 +23,28 @@
   <body>
     <div class="d-flex flex-column justify-content-center w-100 h-100">
       <div class="d-flex flex-column justify-content-center align-items-center">
-        <h1 class="fw-light text-white m-0">Tool</h1>
-        <div class="btn-group my-5">
-          <a href="#" class="btn btn-outline-light" aria-current="page"
-            ><i class="fas fa-file-download me-2"></i>
-            <span id="base64image">Base64 Image Converter</span></a
-          >
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="content-tool">
+        <div class="content-tool">
+          <h1 class="fw-light text-white m-0">Tool</h1>
+          <div class="btn-group my-5">
+            <a href="#" class="btn btn-outline-light" aria-current="page"
+              ><i class="fas fa-file-download me-2"></i>
+              <span id="base64image">Base64 Image Converter</span></a
+            >
+          </div>
+          <div class="row">
+            <div class="col-12">
               <div id="loadTool"></div>
             </div>
           </div>
+          <a href="#" class="text-decoration-none">
+            <h5 class="fw-light text-white m-0">— Code by Trung Pham —</h5>
+          </a>
         </div>
         <script>
           $("#base64image").click(function () {
-            loadContent($("#loadTool"), homeurl + "/base64image.html");
+            loadContent($("#loadTool"), "/base64image.html");
           });
         </script>
-        <a href="#" class="text-decoration-none">
-          <h5 class="fw-light text-white m-0">— Code by Trung Pham —</h5>
-        </a>
       </div>
     </div>
   </body>

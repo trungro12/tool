@@ -1,4 +1,3 @@
-var homeurl = "trungro12.github.io";
 // load content with jquery
 function loadContent(element, url) {
   element
