@@ -26,20 +26,21 @@
         <h1 class="fw-light text-white m-0">Tool</h1>
         <div class="btn-group my-5">
           <a href="#" class="btn btn-outline-light" aria-current="page"
-            ><i class="fas fa-file-download me-2"></i> <span id="base64image">Base64 Image Converter</span></a
+            ><i class="fas fa-file-download me-2"></i>
+            <span id="base64image">Base64 Image Converter</span></a
           >
         </div>
         <div class="row">
-            <div class="col-12">
-                <div id="loadTool">
-
-                </div>
+          <div class="col-12">
+            <div class="content-tool">
+              <div id="loadTool"></div>
             </div>
+          </div>
         </div>
         <script>
-            $("#base64image").click(function(){
-                loadContent($("#loadTool"),homeurl + "/base64image.html");
-            });
+          $("#base64image").click(function () {
+            loadContent($("#loadTool"), homeurl + "/base64image.html");
+          });
         </script>
         <a href="#" class="text-decoration-none">
           <h5 class="fw-light text-white m-0">— Code by Trung Pham —</h5>
