@@ -14,7 +14,7 @@
 
   document.querySelector("#inp").addEventListener("change", readFile);
 </script>
-<input id="inp" style="color: #fff;" type="file" />
+<input id="inp" style="color: #fff" type="file" />
 <p id="b64"></p>
 <img id="img" height="150" />
 <style>
@@ -30,3 +30,14 @@
     user-select: all;
   }
 </style>
+<link rel="stylesheet" href="css/dropzone.css" />
+<script src="js/dropzone.js"></script>
+
+<script>
+  Dropzone.autoDiscover = false;
+
+  let myDropzone = new Dropzone("#inp");
+  myDropzone.on("addedfile", (file) => {
+    console.log(`File added: ${file.name}`);
+  });
+</script>
