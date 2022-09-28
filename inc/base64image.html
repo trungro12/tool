@@ -1,75 +1,28 @@
 <script>
   function readFile() {
     if (!this.files || !this.files[0]) return;
-    for (var i = 0; i < files.length; i++) {
-      document.getElementById("fileDragName").innerHTML =
-        "Name : " + files[i].name;
-      document.getElementById("fileDragSize").innerHTML =
-        "Size : " + files[i].size;
-      document.getElementById("fileDragType").innerHTML =
-        "Type : " + files[i].type;
-      const FR = new FileReader();
 
-      FR.addEventListener("load", function (evt) {
-        document.querySelector("#img").src = evt.target.result;
-        document.querySelector("#b64").style.display = "block";
-        document.querySelector("#b64").textContent = evt.target.result;
-      });
+    const FR = new FileReader();
 
-      FR.readAsDataURL(this.files[0]);
-    }
+    FR.addEventListener("load", function (evt) {
+      document.querySelector("#img").src = evt.target.result;
+      document.querySelector("#b64").textContent = evt.target.result;
+    });
+
+    FR.readAsDataURL(this.files[0]);
   }
 
   document.querySelector("#inp").addEventListener("change", readFile);
-  var holder = document.getElementById("holder");
-  holder.ondragover = function () {
-    this.className = "hover";
-    return false;
-  };
-  holder.ondragend = function () {
-    this.className = "";
-    return false;
-  };
-  holder.ondrop = function (e) {
-    this.className = "";
-    e.preventDefault();
-    readFile(e.dataTransfer.files);
-  };
 </script>
-<p id="fileDragName"></p>
-<p id="fileDragSize"></p>
-<p id="fileDragType"></p>
-<!-- <input id="inp" style="color: #fff;" type="file" /> -->
-<form method="post" action="">
-  <input id="inp" style="color: #fff" type="file" />
-  <p class="h3">OR</p>
-  <div id="holder">
-    <p class="h1">Drop File Here</p>
-    <!-- <div></div> -->
-  </div>
-</form>
-
+<input id="inp" style="color: #fff" type="file" />
 <p id="b64"></p>
 <img id="img" height="150" />
 <style>
-  #holder {
-    overflow: hidden;
-    width: 500px;
-    height: 200px;
-    border: 10px dashed #fff;
-    margin: auto;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-  }
-  #holder.hover {
-    border: 10px dashed #0c0 !important;
-  }
   #b64 {
     max-width: 500px;
     height: 100px;
     background: #fff;
-    display: none;
+    display: block;
     overflow: auto;
     word-wrap: break-word;
     margin: 15px auto;
