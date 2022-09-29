@@ -83,6 +83,9 @@ input[type="file"] {
   color: #fff;
   backdrop-filter: blur(6px);
 }
+input[type="text"] {
+  padding: 0px;
+}
 #inp:hover {
   background: rgb(0 0 0 / 59%);
 }
