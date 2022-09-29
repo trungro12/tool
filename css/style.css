@@ -37,6 +37,23 @@ h2 {
   border-top: 1px solid #fff;
   padding: 20px;
 }
+.textcolor, #loadTool h3{
+  animation: textcolor 5s infinite alternate;
+}
+@keyframes textcolor {
+  0% {
+    color: #6ee4c8;
+  }
+  25% {
+    color: #63bfe0;
+  }
+  50% {
+    color: #eb92b4;
+  }
+  75% {
+    color: #ecaa95;
+  }
+}
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -93,7 +110,7 @@ input[type="file"]::before {
   position: absolute;
   display: block;
   margin: auto;
-  content: " (or) Drag and Drop files here. ";
+  content: " (or) Drag and Drop file here. ";
   color: #fff;
   font-weight: 900;
   bottom: 30px;
