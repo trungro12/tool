@@ -38,7 +38,7 @@ h2 {
   padding: 20px;
 }
 .textcolor,
-#loadTool h3 {
+#loadTool h3:nth-child(1) {
   animation: textcolor 5s infinite alternate;
 }
 @keyframes textcolor {
