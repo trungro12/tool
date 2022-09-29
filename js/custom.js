@@ -33,6 +33,7 @@ function readFile() {
     document.querySelector("#result").innerHTML += "<p>Name : " + name + "</p>";
     document.querySelector("#result").innerHTML += "<p>Size : " + size.formatBytes() + "</p>";
     document.querySelector("#result").innerHTML += "<p>Type : " + type + "</p>";
+    document.querySelector("#result").innerHTML += "<p>Base64 Data</p>";
     document.querySelector("#preview").innerHTML = "<h3>Preview</h3>";
   });
 
