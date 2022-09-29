@@ -6,6 +6,7 @@ function loadContent(element, url) {
     )
     .load(url);
 }
+// base64image
 function readFile() {
   if (!this.files || !this.files[0]) return;
 
