@@ -38,6 +38,7 @@ h2 {
     background-position: 0% 50%;
   }
 }
+/* base64image */
 #b64 {
   max-width: 500px;
   height: 100px;
@@ -48,4 +49,15 @@ h2 {
   margin: 15px auto;
   -webkit-user-select: all;
   user-select: all;
+}
+#inp {
+  color: #fff;
+  font-size: 20px;
+  border: 1px solid #fff;
+  vertical-align: text-bottom;
+  padding: 70px;
+  width: 400px;
+}
+input#file-upload-button{
+  border: 1px;
 }
