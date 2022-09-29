@@ -22,3 +22,9 @@ function readFile() {
 
   FR.readAsDataURL(this.files[0]);
 }
+
+// md5 
+function md5Generator(){
+  var result = md5($(this).val());
+  document.querySelector("#result").innerHTML = "<h3>Result</h3><p id='content-result'>" + result + "</p>";
+}
