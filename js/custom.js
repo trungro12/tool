@@ -20,4 +20,3 @@ function readFile() {
 
   FR.readAsDataURL(this.files[0]);
 }
-document.querySelector("#inp").addEventListener("change", readFile);
