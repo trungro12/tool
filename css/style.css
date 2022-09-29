@@ -125,3 +125,6 @@ input[type="file"]::file-selector-button {
   color: #fff;
   backdrop-filter: blur(6px);
 }
+.keyword{
+  color: #fff;
+}
