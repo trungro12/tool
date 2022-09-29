@@ -1,33 +1,3 @@
-<script>
-  function readFile() {
-    if (!this.files || !this.files[0]) return;
-
-    const FR = new FileReader();
-
-    FR.addEventListener("load", function (evt) {
-      document.querySelector("#img").src = evt.target.result;
-      document.querySelector("#b64").style.display = "block";
-      document.querySelector("#b64").textContent = evt.target.result;
-    });
-
-    FR.readAsDataURL(this.files[0]);
-  }
-
-  document.querySelector("#inp").addEventListener("change", readFile);
-</script>
 <input id="inp" style="color: #fff" type="file" />
 <p id="b64"></p>
-<img id="img" style="margin: 20px auto;" height="150" />
-<style>
-  #b64 {
-    max-width: 500px;
-    height: 100px;
-    background: #fff;
-    display: none;
-    overflow: auto;
-    word-wrap: break-word;
-    margin: 15px auto;
-    -webkit-user-select: all;
-    user-select: all;
-  }
-</style>
+<img id="img" style="margin: 20px auto" height="150" />
