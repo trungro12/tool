@@ -12,6 +12,9 @@ h2 {
   padding-left: 4px;
   vertical-align: text-top;
 }
+#loadTool h3{
+  margin: 10px auto;
+}
 .content-tool {
   background: rgb(0 0 0 / 25%);
   box-shadow: 3px 3px 9px 1px rgb(0 0 0 / 37%);
@@ -46,19 +49,32 @@ h2 {
   display: none;
   overflow: auto;
   word-wrap: break-word;
-  margin: 15px auto;
+  margin: auto;
   -webkit-user-select: all;
   user-select: all;
-  color: #000!important;
+  color: #000 !important;
+}
+#img{
+  margin: auto;
 }
 #inp {
   color: #fff;
   font-size: 20px;
-  border: 1px solid #fff;
+  border: 3px dashed #fff;
   vertical-align: text-bottom;
   padding: 70px;
-  width: 400px;
+  border-radius: 3px;
+  background: rgb(0 0 0 / 25%);
+  box-shadow: 3px 3px 9px 1px rgb(0 0 0 / 37%);
+  color: #fff;
+  backdrop-filter: blur(6px);
 }
-input#file-upload-button{
+input[type="file"]::file-selector-button {
+  font-weight: bold;
+  padding: 0.5em;
   border: 1px;
+  background: rgb(0 0 0 / 25%);
+  box-shadow: 3px 3px 9px 1px rgb(0 0 0 / 37%);
+  color: #fff;
+  backdrop-filter: blur(6px);
 }

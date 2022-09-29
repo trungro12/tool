@@ -16,6 +16,8 @@ function readFile() {
     document.querySelector("#img").src = evt.target.result;
     document.querySelector("#b64").style.display = "block";
     document.querySelector("#b64").textContent = evt.target.result;
+    document.querySelector("#result").innerHTML = "<h3>Result</h3>";
+    document.querySelector("#preview").innerHTML = "<h3>Preview</h3>";
   });
 
   FR.readAsDataURL(this.files[0]);

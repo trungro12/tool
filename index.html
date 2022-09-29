@@ -30,9 +30,11 @@
           <div class="col-12">
             <div id="loadTool">
               <!-- base64 image encoder  -->
-              <p>Base64 Image Encoder, Image To Base64 Converter, Convert Image to Base64</p>
+              <p>Base64 Image Encoder, Image To Base64 Converter, Convert Image to Base64, Base64 Converter</p>
               <input id="inp" type="file" />
+              <span id="result"></span>
               <p id="b64"></p>
+              <span id="preview"></span>
               <img id="img" style="margin: 20px auto" height="150" />
               <script>
                 document.querySelector("#inp").addEventListener("change", readFile);
