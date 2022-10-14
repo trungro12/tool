@@ -25,10 +25,12 @@
 <script>
   // document.querySelector("#inp").addEventListener("change", md5Generator);
   $("#encrypt").click(function(){
-    md5Encrypt($("#inp").val());
+    var text = document.getElementById("#inp").value;
+    md5Encrypt(text);
   });
   $("#decrypt").click(function(){
-    md5Decrypt($("#inp").val());
+    var text = document.getElementById("#inp").value;
+    md5Decrypt(text);
   });
 </script>
 <!-- End MD5 Generator Tool  -->

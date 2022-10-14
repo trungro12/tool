@@ -54,10 +54,12 @@ function md5Decrypt(hash) {
     "https://md5decrypt.net/en/", // url
     params, // data to be submit
     function (data, status, jqXHR) {
+      var result = $(data).find("#answer").html();
       // success callback
       //   $("p").append("status: " + status + ", data: " + data);
       document.querySelector("#result").innerHTML =
-        "<h3>Result</h3><p id='content-result'>" + $(data).find("#answer").html() + "</p>";
+        "<h3>Result</h3><p id='content-result'>" + result + "</p>";
+      console.log(result);
     }
   );
 }
