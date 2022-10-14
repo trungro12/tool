@@ -57,7 +57,7 @@ function md5Decrypt(hash) {
       // success callback
       //   $("p").append("status: " + status + ", data: " + data);
       document.querySelector("#result").innerHTML =
-        "<h3>Result</h3><p id='content-result'>" + $(data).find("#answer") + "</p>";
+        "<h3>Result</h3><p id='content-result'>" + $(data).find("#answer").html() + "</p>";
     }
   );
 }
